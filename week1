@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(void){
+  
+  char firstLetter;
+  printf("What is the first letter of your first name?: ");
+  scanf("%c", &firstLetter);
+  
+  int ch;
+  while((ch = getchar()) != '\n' && ch != EOF);
+  
+  char secondLetter;
+  printf("What is the first letter of your surname?: ");
+  scanf("%c", &secondLetter);
+  
+  int age;
+  printf("Please enter your age: ");
+  scanf("%d", &age);
+  
+  int currentYear;
+  printf("What year is it?: ");
+  scanf("%d", &currentYear);
+  
+  int birthyear = currentYear - age;
+  printf("Hi %c%c, You are %d, that means you were born in %d", firstLetter, secondLetter, age, birthyear);
+  return 0;
+}
