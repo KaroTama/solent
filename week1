@@ -22,6 +22,6 @@ int main(void){
   scanf("%d", &currentYear);
   
   int birthyear = currentYear - age;
-  printf("Hi %c%c, You are %d, that means you were born in %d", firstLetter, secondLetter, age, birthyear);
+  printf("Hi %c%c, You are %d, that means you were born in %d, the year now is %d!\n", firstLetter, secondLetter, age, birthyear, currentYear);
   return 0;
 }
