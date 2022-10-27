@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+  int speed;
+  printf("Please enter your speed: ");
+  scanf("%d", &speed);
+  int speedLimit = 30;
+if(speed > speedLimit)
+  {
+printf("Your speed is: %d.\n The speed limit is: 30.\nYou are SPEEDING!\nTicket for you!\nSlow down to the proper speed indicated by the speed limit!", speed);
+   }
+else
+  {
+  printf("Your speed is: %d.\nThe speed limit is: 30!\nPlease continue to drive safely!", speed);
+  }
+}
