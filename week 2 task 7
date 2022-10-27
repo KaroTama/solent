@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int day;
+  printf("Please enter what numeric day is is: ");
+  scanf("%d", &day);
+    int month;
+  printf("Please enter what numeric month it is: ");
+  scanf("%d", &month);
+
+ if(day == 1 && month == 4)
+{
+printf("Today is April Fools!");
+}
+else if(day == 1 && month == 1)
+{
+printf("Today is New Years Day!");
+}
+else if(day == 4 && month == 5)
+{
+printf("Today is Star Wars Day!\n May the 4th be with you!");
+}
+else if(day == 29 && month == 10)
+{
+printf("Today is my Birthday!");
+}  
+else if(day == 31 && month == 10)
+{
+printf("Today is Halloween!");
+}  
+else if(day == 25 && month == 12)
+{
+printf("Today is Christmas!\nMerry Christmas!");
+}  
+else
+{
+printf("No information of this day is currently available!");
+}
+ 
+}
