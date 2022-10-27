@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+  int ticketPrice = 4;
+  int discount1 = 2;
+  int discount2 = 3;
+  int age;
+ 
+printf("Please enter your age: ");
+  scanf("%d", &age);
+if (age < 4)
+{
+printf("Infants, children younger than 4, travel for free!");
+}
+else if(age < 16)
+{
+  int finalprice = ticketPrice / discount1; 
+printf("Paasengers under 16 buy a child ticket for: £%d", finalprice);
+}
+else if(age >= 65 )
+{
+  float finalprice = ticketPrice / discount2;
+printf("Passengers aged 65 or over pay: £%f", finalprice);
+}
+else
+{
+printf("Paasengers that are neither younger than 16 or 65 or older pay the base ticket price: £%d", ticketPrice);
+}
+ 
+}
