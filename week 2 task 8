@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-  int ticketPrice = 4;
+  double ticketPrice = 4;
   int discount1 = 2;
   int discount2 = 3;
   int age;
@@ -19,8 +19,8 @@ printf("Passengers under 16 buy a child ticket for: £%d", finalprice);
 }
 else if(age >= 65 )
 {
-  float finalprice = ticketPrice / discount2;
-printf("Passengers aged 65 or over pay: £%f", finalprice);
+  double finalprice = ticketPrice / discount2;
+printf("Passengers aged 65 or over pay: £%lf", finalprice);
 }
 else
 {
