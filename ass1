@@ -8,7 +8,7 @@ int main() {
   scanf("%lf", &numberA);
   printf("Please enter a second number: ");
   scanf("%lf", &numberB);
-  printf("What calculation do you want to do?\n Enter 1 for Addition\n Enter 2 for Subtraction\n Enter 3 for Multiplication\n Enter 4 for division\n What do you wnt to do: ");
+  printf("What calculation do you want to do?\n Enter 1 for Addition\n Enter 2 for Subtraction\n Enter 3 for Multiplication\n Enter 4 for division\n What do you want to do: ");
   scanf("%d", &operationChoice);
   
 if (operationChoice == 1)
