@@ -11,56 +11,22 @@ int main() {
   
   printf("Please enter the weight of your letter in grams: ");
   scanf("%f", &weight);
-  printf("Do you prefer second class? Enter Y or N: ");
-  scanf("%c", &sClass);
+  if (weight <= 100){
+    printf("Do you prefer second class? Enter Y or N: ");
+  scanf("%c", &sClass);}
   
-  int ch;
-  while((ch = getchar()) != '\n' && ch != EOF);
-  
-  if (sClass == 'Y')
-  {
-    if (weight <= 100)
-    {
-      float finalcost = basicprice * discount;
-      printf("Your price is: £%f", finalcost);
-    }
-    else if(weight > 100 && weight < 250)
-    {
+    if (weight <= 100){
+      printf("Your price is: £%.2f", basicprice);
+    }else if(weight > 100 && weight < 250 && sClass == 'Y'){
       float cost = basicprice * charge1;
       float finalcost = cost * discount;
-      printf("Your letter cost is: £%f", finalcost);
-    }
-    else if(weight > 251 && weight < 500)
-    {
+      printf("Your letter cost is: £%.2f", finalcost);
+    }else if(weight > 251 && weight < 500 && sClass == 'Y'){
     float cost = basicprice * charge2;
     float finalcost = cost * discount;
-    printf("Your letter cost is: £%f", finalcost);
-    }
-    else if(weight > 501 && weight < 750)
-    {
+    printf("Your letter cost is: £%.2f", finalcost);
+    }else if(weight > 501 && weight < 750 && sClass == 'Y'){
       float cost = basicprice * charge1;
       float finalcost = cost * discount;
-      printf("Your letter cost is: £%f", finalcost);
-    }
-  }
-  else
-    if (weight <= 100)
-    {
-      printf("Your price is: £%f", basicprice);  
-    }
-    else if(weight > 100 && weight < 250)
-    {
-      float cost = basicprice * charge1;
-      printf("Your letter cost is: £%f", cost);
-    }
-    else if(weight > 251 && weight < 500)
-    {
-      float cost = basicprice * charge2;
-      printf("Your letter cost is: £%f", cost);
-    }
-    else if(weight > 501 && weight < 750)
-    {
-      float cost = basicprice * charge3;  
-      printf("Your letter cost is: £%f", cost);
-    }
+      printf("Your letter cost is: £%.2f", finalcost);}
   }
