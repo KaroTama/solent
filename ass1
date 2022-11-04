@@ -4,36 +4,25 @@ int main() {
   double numberA;
   double numberB;
   int operationChoice;
-  printf("Please enter a first number: ");
+  printf("Please enter a First number: ");
   scanf("%lf", &numberA);
-  printf("Please enter a second number: ");
+  printf("Please enter a Second number: ");
   scanf("%lf", &numberB);
-  printf("What calculation do you want to do?\n Enter 1 for Addition\n Enter 2 for Subtraction\n Enter 3 for Multiplication\n Enter 4 for division\n What do you want to do: ");
+  printf("What calculation do you want to do?\n Enter 1 for Addition\n Enter 2 for Subtraction\n Enter 3 for Multiplication\n Enter 4 for Division\n What do you want to do: ");
   scanf("%d", &operationChoice);
   
-if (operationChoice == 1)
-{
+if (operationChoice == 1){
   double finalAnswer = numberA + numberB;
-  printf("Your answer is: %lf", finalAnswer);
-}
-else if(operationChoice == 2)
-{
+  printf("Your answer is: %.2lf", finalAnswer);
+}else if(operationChoice == 2){
   double finalAnswer = numberA - numberB;
-  printf("Your answer is: %lf", finalAnswer);
-}
-else if(operationChoice == 3)
-{
+  printf("Your answer is: %.2lf", finalAnswer);
+  }else if(operationChoice == 3){
   double finalAnswer = numberA * numberB;
-  printf("Your answer is: %lf", finalAnswer);
-}
-else if(operationChoice == 4)
-{
+  printf("Your answer is: %.2lf", finalAnswer);
+}else if(operationChoice == 4){
   double finalAnswer = numberA / numberB;
-  printf("Your answer is: %lf", finalAnswer);
-}
-else
-{
-printf("Please restart the programme and enter a valid number");
-}
- 
+  printf("Your answer is: %.2lf", finalAnswer);
+}else{
+printf("Please restart the programme and enter a valid number\n");}
 }
