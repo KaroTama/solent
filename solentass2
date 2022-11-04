@@ -1,32 +1,34 @@
 #include <stdio.h>
-
+#include <stdbool.h>
 int main() {
   float weight;
-  float basicprice = 2.85;
-  float charge1 = 1.25;
-  float charge2 = 1.42;
-  float charge3 = 1.65;
-  float discount = 0.85;
-  char sClass;
+  float basicprice=2.85;
+  float charge1=1.25;
+  float charge2=1.42;
+  float charge3=1.65;
+  float discount=0.85;
+  bool y="first class" ;
+  bool x="second class";
+  
   
   printf("Please enter the weight of your letter in grams: ");
   scanf("%f", &weight);
-  if (weight <= 100){
-    printf("Do you prefer second class? Enter Y or N: ");
-  scanf("%c", &sClass);}
+  if (weight>100){
+    printf("Do you prefer second class? Enter either first class or second class: ");
+  scanf("%s", &x);}
   
-    if (weight <= 100){
+    if (weight<=100){
       printf("Your price is: £%.2f", basicprice);
-    }else if(weight > 100 && weight < 250 && sClass == 'Y'){
+    }else if(weight>100 && weight<250&& y ==''){
       float cost = basicprice * charge1;
       float finalcost = cost * discount;
       printf("Your letter cost is: £%.2f", finalcost);
-    }else if(weight > 251 && weight < 500 && sClass == 'Y'){
-    float cost = basicprice * charge2;
-    float finalcost = cost * discount;
+    }else if(weight>251&&weight<500&&sClass=='Y'){
+    float cost = basicprice*charge2;
+    float finalcost = cost*discount;
     printf("Your letter cost is: £%.2f", finalcost);
-    }else if(weight > 501 && weight < 750 && sClass == 'Y'){
-      float cost = basicprice * charge1;
-      float finalcost = cost * discount;
+    }else if(weight>501&&weight<750&&sClass=='Y'){
+      float cost = basicprice*charge1;
+      float finalcost = cost*discount;
       printf("Your letter cost is: £%.2f", finalcost);}
   }
