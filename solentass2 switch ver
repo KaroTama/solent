@@ -1,0 +1,54 @@
+#include <stdio.h>
+int main() {
+  char secondclass;
+  float weight;
+  float basicprice=2.85;
+  float charge1=1.25;
+  float charge2=1.42;
+  float charge3=1.65;
+  float discount=0.85;
+  
+  printf("Please enter the weight of your letter in grams: ");
+  scanf("%f", &weight);
+  if(weight > 750){
+    printf("Your letter is exceeding maximum weight!");
+  }
+  if(weight>100 && weight<=750){
+    printf("Do you prefer second class? Enter Y or N: ");
+    scanf("%c", &secondclass);}
+  
+  if(weight<=100){
+      printf("Your price is: £%.2f", basicprice);}
+
+  switch(secondclass){
+    case'Y':
+    case'y':{
+      if (weight>=101&&weight<=250){
+        double cost = basicprice * charge1;
+        double finalcost = cost * discount;
+        printf("Your total comes to: £%.2f", finalcost);
+        }else if (weight>=251&&weight<=500){
+        double cost = basicprice * charge2;
+        double finalcost = basicprice * discount;
+        printf("Your total comes to: £%.2f", finalcost);
+        }else if (weight>=501&&weight<=750){
+        double cost = basicprice * charge3;
+        double finalcost = basicprice * discount;
+        printf("Your total comes to: £%.2f", finalcost);
+        }
+      } break;
+    case 'N':
+    case 'n':{
+      if (weight>=101&&weight<=250){
+        double cost = basicprice * charge1;
+        printf("Your total comes to: £%.2f", cost);
+        }else if (weight>=251&&weight<=500){
+        double cost = basicprice * charge2;
+        printf("Your total comes to: £%.2f", cost);
+        }else if (weight>=501&&weight<=750){
+        double cost = basicprice * charge3;
+        printf("Your total comes to: £%.2f", cost);
+        }
+      } break;
+  }
+  }
