@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdbool.h>
+int main() {
+  float weight;
+  float basicprice=2.85;
+  float charge1=1.25;
+  float charge2=1.42;
+  float charge3=1.65;
+  float discount=0.85;
+  bool y="second class";
+  
+ 
+  printf("*---------------------------------------------------*\n Hello And Welcome To The Royal Mail Letter Service!\n*___________________________________________________*\n\n\n We Specialize In Sending Letters Up To 750g!\n\n\n Please Enter The Weight Of Your Letter In Grams: ");
+  scanf("%f", &weight);
+
+if (weight>750){
+    printf("\n\n-------------------------------------------------------\n\n This weight is not supported for letters.\n Thank You For Using Our Services!");
+    return 0;}
+
+  if (weight>100){
+    printf("-------------------------------------------------------\n\n Do you prefer second class?\n Enter either:\n For Second Class 'y'\n For First Class 'n'\n Enter Here: ");
+  scanf("%s", &y);}
+  
+     if (weight<=100){
+      printf("\n-------------------------------------------------------\n\n Your Price Is: £%.2f.\n\n Thank You For Using Our Services!", basicprice);
+    }else if(weight>100 && weight<250&& y){
+      float cost = basicprice * charge1;
+      float finalcost = cost * discount;
+      printf("\n-------------------------------------------------------\n\n Your Letter Cost Is: £%.2f.\n\n Thank You For Using Our Services!", finalcost);
+    }else if(weight>251&&weight<500&& y){
+    float cost = basicprice*charge2;
+    float finalcost = cost*discount;
+    printf("\n-------------------------------------------------------\n\n Your Letter Cost Is: £%.2f.\n\n Thank You For Using Our Services!", finalcost);
+    }else if(weight>501&&weight<750&& y){
+      float cost = basicprice*charge3;
+      float finalcost = cost*discount;
+      printf("\n-------------------------------------------------------\n\n Your Letter Cost Is: £%.2f.\n\n Thank You For Using Our Services!", finalcost);
+    }else if(weight>100 && weight<250){
+      float cost = basicprice * charge1;
+      printf("\n-------------------------------------------------------\n\n Your Letter Cost Is: £%.2f.\n\n Thank You For Using Our Services!", cost);
+    }else if(weight>251&&weight<500){
+    float cost = basicprice*charge2;
+    printf("\n-------------------------------------------------------\n\n Your Letter Cost Is: £%.2f.\n\n Thank You For Using Our Services!", cost);
+    }else if(weight>501&&weight<750){
+      float cost = basicprice*charge1;
+      printf("\n-------------------------------------------------------\n\n Your Letter Cost Is: £%.2f.\n\n Thank You For Using Our Services!", cost);}
+    else{
+      printf("\n-------------------------------------------------------\n\n This weight Is Not Supported!.\n\n Thank You For Using Our Services!");}
+  }
