@@ -15,7 +15,7 @@ int main() {
   }
   if(weight>100 && weight<=750){
     printf("Do you prefer second class? Enter Y or N: ");
-    scanf("%c", &secondclass);}
+    scanf(" %c", &secondclass);}
   
   if(weight<=100){
       printf("Your price is: £%.2f", basicprice);}
