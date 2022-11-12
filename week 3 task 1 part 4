@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+  int count=11;
+  count-=1;
+  while(count>=1){
+    printf("%d\n", count);
+    count--;
+  }
+  }
