@@ -14,17 +14,17 @@ printf("Infants, children younger than 4, travel for free!");
 }
 else if(age < 16)
 {
-  int finalprice = ticketPrice / discount1; 
-printf("Passengers under 16 buy a child ticket for: £%d", finalprice);
+  double finalprice = ticketPrice / discount1; 
+printf("Passengers under 16 buy a child ticket for: £%.2lf", finalprice);
 }
 else if(age >= 65 )
 {
   double finalprice = ticketPrice / discount2;
-printf("Passengers aged 65 or over pay: £%lf", finalprice);
+printf("Passengers aged 65 or over pay: £%.2lf", finalprice);
 }
 else
 {
-printf("Passengers that are neither younger than 16 or 65 or older pay the base ticket price: £%d", ticketPrice);
+printf("Passengers that are neither younger than 16 or 65 or older pay the base ticket price: £%.2lf", ticketPrice);
 }
  
 }
