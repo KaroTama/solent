@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void) {
+  int i,a,n;
+  printf("Enter The Number For Which You Want To See It's Time Table: ");
+  scanf("%d",&n);
+
+  for(i=1;i<=10;i++){
+    a=n*i;
+    printf("%d*%d=%d\n",n,i,n*i);
+  }
+  return 0;
+  
+}
