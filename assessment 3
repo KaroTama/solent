@@ -13,7 +13,6 @@ int main()
   for(i = 1; i <= number; i=i+2)
   {
     Sum = Sum + i;
-    printf("%d  ", i);
   }
   printf("\n \n The Sum of Odd Numbers from 1 to %d  = %d", number, Sum);
 
