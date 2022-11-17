@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main() {
+  double sideA;
+  double sideB;
+  double cm;
+  char operationChoice;
+  int i,a,n,num1, num2, max;
+
+
+  printf("Please enter the letter which corresponds with your choice:\n A – Calculate the area of a square\n B - Convert centimetres to inches\n C – Display a multiplication table for a range of numbers between 3-8\n D – Find the maximum of two numbers\n Y - Exit the programme\n Enter your choice: ");
+  scanf("%c", &operationChoice);
+
+  switch(operationChoice){
+    case'A':
+    case'a':{
+      printf("\n\nYou Have Chosen Area Of A Square.\nPlease Enter The First Side: ");
+  scanf("%lf", &sideA);
+      printf("\nPlease Enter The Second Side: ");
+  scanf("%lf", &sideB);
+      double area = sideA * sideB;
+      printf("\nThe Are Of The Square Is: %.2fcm^2\n", area);
+      } break;
+    case'B':
+    case'b':{
+      printf("\n\nYou Have Chosen Centimetre To Inch Converter\n\nPlease Enter The Centimeters You Want To Convert: ");
+  scanf("%lf", &cm);
+    double inches = cm / 2.54;
+      printf("\n%.0lfcm Will Be: %.2f inches\n", cm, inches);
+      } break;
+    case'C':
+    case'c':{
+      printf("\n\nYou Have Chosen Multiplication Table Form 3 To 8!\n\nPlease Enter What Time Table You Want To See: ");
+  scanf("%d", &n);
+     for(i=1;i<=20;i++){
+    a=n*i;
+    printf("%d*%d=%d\n",n,i,n*i);
+  }
+      } break;
+     case'D':
+     case'd':{
+      printf("\n\nYou Have Chosen Maximum Of Two Numbers!\n\nPlease Enter The First Of Two Numbers You Want To Find The Maximum Of: ");
+  scanf("%d", &num1);
+       printf("Please Enter The Second Of Two Numbers You Want To Find The Maximum Of: ");
+  scanf("%d",&num2);
+     if(num1 > num2)
+        max = num1;
+    else
+        max = num2;
+
+    printf("%d is maximum.", max);
+      } break;
+    }
+  
+  
+  }
