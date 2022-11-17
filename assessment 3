@@ -1,15 +1,21 @@
 #include<stdio.h>
 int main()
 {
- int n,i,j,z;
+ int number,i,j,z, Sum = 0;
  printf("Odd Numbers Between 1 And: ");
- scanf("%d", &n);
- for(i=1; i<=n; i++)
+ scanf("%d", &number);
+ for(i=1; i<=number/2; i++)
  {
    for(j=1,z=1; j<=i; j++,z=z+2)
        printf("%d ",z);
    printf("\n");
  }
- 
-    return 0;
+  for(i = 1; i <= number; i=i+2)
+  {
+    Sum = Sum + i;
+    printf("%d  ", i);
+  }
+  printf("\n \n The Sum of Odd Numbers from 1 to %d  = %d", number, Sum);
+
+  return 0;
 }
