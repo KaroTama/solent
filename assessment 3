@@ -2,14 +2,20 @@
 int main()
 {
  int number,i,j,z, Sum = 0;
- printf("Odd Numbers Between 1 And: ");
+ char choice;
+
+ printf("Enter The Final Number To End The Sequence. 1 And: ");
  scanf("%d", &number);
+ printf("What Would You Like To See?\nEnter 'o' To Display Odd Numbers\nEnter 'e' To Display Even Numbers\nEnter 'a' To Display All Number Between 1 and %d\nEnter Your Choice:", number);
+ scanf(" %c", &choice);
+
+ while (choice == 'o'){
  for(i=1; i<=number/2; i++)
- {
-   for(j=1,z=1; j<=i; j++,z=z+2)
-       printf("%d ",z);
-   printf("\n");
- }
+  {
+    for(j=1,z=1; j<=i; j++,z=z+2)
+        printf("%d ",z);
+    printf("\n");
+  }
   for(i = 1; i <= number; i=i+2)
   {
     Sum = Sum + i;
@@ -17,4 +23,35 @@ int main()
   printf("\n \n The Sum of Odd Numbers from 1 to %d  = %d", number, Sum);
 
   return 0;
+ }
+ while (choice == 'e'){
+  for(i=1; i<=number/2; i++)
+  {
+    for(j=1,z=0; j<=i; j++,z=z+2)
+        printf("%d ",z);
+    printf("\n");
+  }
+  for(i = 0; i <= number; i=i+2)
+  {
+    Sum = Sum + i;
+  }
+  printf("\n \n The Sum of Even Numbers from 1 to %d  = %d", number, Sum);
+
+  return 0;
+ }
+  while (choice == 'a'){
+  for(i=1; i<=number; i++)
+  {
+    for(j=1,z=1; j<=i; j++,z=z+1)
+        printf("%d ",z);
+    printf("\n");
+  }
+  for(i = 1; i <= number; i=i+1)
+  {
+    Sum = Sum + i;
+  }
+  printf("\n \n The Sum of All Numbers from 1 to %d  = %d", number, Sum);
+
+  return 0;
+ }
 }
